@@ -5,7 +5,7 @@
 This module manages chartsets for arcade rhythm games. In an arcade rhythm game, a chartset is made of:
 
 - **Charts**  
-    The specific sequence of notes a player has to hit, represented by fictional text files in this module's chartsets array. Data about each chart may include (for the purposes of this module):
+    The specific sequence of notes a player has to hit. Data about each chart may include (for the purposes of this module):
     - *Notecount*  
         Total number of notes in the chart.
     - *Difficulty Name*  
