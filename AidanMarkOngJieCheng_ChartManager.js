@@ -119,6 +119,7 @@ module.exports = {
             console.log(`Artist: ${element.artist}`);
             console.log(`BPM: ${element.bpm}`);
             console.log(`Jacket: ${element.jacket}`);
+            console.log("=============================================================================================================================");
         });
     },
     printAllCharts() { //prints all data of all charts in all chartsets
@@ -128,6 +129,7 @@ module.exports = {
             console.log(`ADVANCED chart: \n Difficulty: ${element.charts["ADVANCED"].difficulty} \n Notecount: ${element.charts["ADVANCED"].notecount}`);
             console.log(`EXPERT chart: \n Difficulty: ${element.charts["EXPERT"].difficulty} \n Notecount: ${element.charts["EXPERT"].notecount}`);
             console.log(`MASTER chart: \n Difficulty: ${element.charts["MASTER"].difficulty} \n Notecount: ${element.charts["MASTER"].notecount}`);
+            console.log("=============================================================================================================================");
         });
     },
 
@@ -156,6 +158,7 @@ module.exports = {
     printChartsAt(i) { //prints data of all charts of chartset at index i
         let element = this.chartsets[i];
 
+        console.log(`Title: ${element.title}`);
         console.log(`BASIC chart: \n Difficulty: ${element.charts["BASIC"].difficulty} \n Notecount: ${element.charts["BASIC"].notecount}`);
         console.log(`ADVANCED chart: \n Difficulty: ${element.charts["ADVANCED"].difficulty} \n Notecount: ${element.charts["ADVANCED"].notecount}`);
         console.log(`EXPERT chart: \n Difficulty: ${element.charts["EXPERT"].difficulty} \n Notecount: ${element.charts["EXPERT"].notecount}`);
@@ -163,7 +166,7 @@ module.exports = {
     },
     printChartAt(i, difficulty) { //prints data of specific chart whose difficulty name matches the difficulty argument in the chartset at index i
         let element = this.chartsets[i];
-
+        console.log(`Title: ${element.title}`);
         console.log(`${difficulty} chart: \n Difficulty: ${element.charts[difficulty].difficulty} \n Notecount: ${element.charts[difficulty].notecount}`);
     },
 
@@ -196,6 +199,7 @@ module.exports = {
     printChartsFromTitle(title) { //prints data in all charts in the chartset whose title matches the argument
         this.chartsets.forEach(element => {
             if (element.title == title) {
+                console.log(`Title: ${element.title}`)
                 console.log(`BASIC chart: \n Difficulty: ${element.charts["BASIC"].difficulty} \n Notecount: ${element.charts["BASIC"].notecount}`);
                 console.log(`ADVANCED chart: \n Difficulty: ${element.charts["ADVANCED"].difficulty} \n Notecount: ${element.charts["ADVANCED"].notecount}`);
                 console.log(`EXPERT chart: \n Difficulty: ${element.charts["EXPERT"].difficulty} \n Notecount: ${element.charts["EXPERT"].notecount}`);
@@ -206,9 +210,10 @@ module.exports = {
     printChartFromTitle(title, difficulty) { //prints data in the chart whose difficulty name matches the difficulty argument in the chartset whose title matches the title argument
         this.chartsets.forEach(element => {
             if (element.title == title) {
+                console.log(`Title: ${element.title}`)
                 console.log(`${difficulty} chart: \n Difficulty: ${element.charts[difficulty].difficulty} \n Notecount: ${element.charts[difficulty].notecount}`);
             }
         });
 
-    }
+    },
 }

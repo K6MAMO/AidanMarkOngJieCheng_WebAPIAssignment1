@@ -40,9 +40,6 @@ Returns Title value for the chartset at index i. (return type: String)
 `chartsets[i].bpm`  
 Returns BPM value for the chartset at index i. (return type: double)  
 
-`getChartsetByTitle(String title)`  
-Returns chartset whose title matches the argument. (return type: Object)
-
 `chartsets[i].charts["BASIC"]` `chartsets[i].charts["ADVANCED"]` `chartsets[i].charts["EXPERT"]` `chartsets[i].charts["MASTER"]`  
 Returns chart whose difficulty name matches the index, as the difficulty names are the keys. (return type: Object)
 
@@ -52,7 +49,7 @@ Returns number of notes for the chart at key x in the chartset at index i. (retu
 `chartsets[i].charts[x].difficulty`  
 Returns difficulty rating for the chart at key x in the chartset at index i. (return type: double)
 
-#### Printers
+#### Functions
 
 `printAll()`  
 Prints the data for all chartsets. (return type: void)
